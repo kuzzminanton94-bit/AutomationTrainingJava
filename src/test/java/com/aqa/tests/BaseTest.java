@@ -3,6 +3,7 @@ package com.aqa.tests;
 import com.aqa.config.Config;
 import com.aqa.core.BrowserFactory;
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.WaitUntilState;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -28,7 +29,9 @@ public class BaseTest {
         );
 
         page = context.newPage();
-        page.navigate("https://www.google.com");
+        page.navigate("https://www.saucedemo.com/",
+                new Page.NavigateOptions().setWaitUntil(WaitUntilState.DOMCONTENTLOADED)
+                );
     }
 
     @AfterEach

@@ -1,0 +1,32 @@
+{
+  "name": "shop-automation-framework-ts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeScript + Playwright port of the Java shop-automation-framework",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "install:browsers": "playwright install chromium",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "allure-commandline": "^2.46.1",
+    "allure-js-commons": "^3.14.0",
+    "allure-playwright": "^3.14.0",
+    "dotenv": "^18.0.10",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.12.2",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0"
+  }
+}
